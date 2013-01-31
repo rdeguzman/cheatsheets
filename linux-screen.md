@@ -1,4 +1,4 @@
-title: Linux Screen
+Linux Screen
 ---
 
 ### Basic Tutorial

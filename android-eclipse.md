@@ -1,7 +1,7 @@
-title: Eclipse Shortcuts for Android Development
+Eclipse Shortcuts for Android Development
 ---
 
-### Stuff
+### General
     cmd + shift + r       Opens Resource
 ### Graphical Layout
     ctl + m               Maximizes and minimizes the layout view
