@@ -15,7 +15,7 @@ title: Linux Screen
 ####Attach to a currently running screen session
     % screen -r             
 
-####Attach to a currently running screen session
+####Attach to a known screen session
     % screen -r 29760.1     
 
 ### Key Shortcuts
