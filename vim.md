@@ -1,4 +1,4 @@
-Vim
+Basic Vim
 ---
 
 ### Removing ^M characters
@@ -8,3 +8,15 @@ Vim
     qa               Start recording macro a
     q				 Start/Stop recording
     10@a			 Play macro 10 times
+
+Vimrc Configuration
+---
+### Basic
+	:set background=dark
+	:set tabstop=3
+	:set shiftwidth=3
+	:set expandtab
+	:syn on
+	:set number
+	:set autoindent
+    
