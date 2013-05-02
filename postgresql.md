@@ -6,6 +6,20 @@ PostgreSQL
 	SELECT * FROM pg_stat_activity WHERE datname = 'sample_database';
 	SELECT pg_terminate_backend(23240) FROM pg_stat_activity WHERE datname = 'sample_database';
 	
+### Show size in MB for each database
+	postgres=# select datname, pg_size_pretty(pg_database_size(datname)) from pg_database;
+	       datname        | pg_size_pretty
+	----------------------+----------------
+	 template1            | 5425 kB
+	 template0            | 5425 kB
+	 postgres             | 5425 kB
+	 testdb               | 5425 kB
+	 template_postgis     | 9401 kB
+	 gazetteer_au         | 5417 MB
+	 nominatim            | 7516 MB
+	 nominatim_20121210   | 9319 MB
+	(10 rows)	
+	
 ### Showing the biggest tables in MB
 	SELECT 
 	  table_schema, 
