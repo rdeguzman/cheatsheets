@@ -1,5 +1,8 @@
 PostgreSQL
 ---
+### pg_dump
+	pg_dump --host=127.0.0.1 --port=5432 --username=dbadmin --format=custom --file="/path/to/database.backup" database_name
+
 
 ### Kill client connection
 	SELECT * FROM pg_stat_activity;
