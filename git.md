@@ -25,6 +25,11 @@ The --no-ff flag causes the merge to always create a new commit object, even if 
 	
 	%git push origin master
 	
+### Reset HARD
+Forget everything on my current local branch and make it exactly the same as origin/master
+	
+	% git reset --hard origin/master	
+	
 	
 
     
