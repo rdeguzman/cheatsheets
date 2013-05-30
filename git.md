@@ -9,8 +9,8 @@ Git
 	...
 	%git checkout master
 	Switched to branch 'master'
-	
-	% git pull --rebase gplr
+
+	% git pull --rebase 	#alias to gplr	
     First, rewinding head to replay your work on top of it...
 	Fast-forwarded master to 4a1dea608d999568ccc32fd7ee4e6b57c4bfcb0a.
 	
