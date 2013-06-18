@@ -6,6 +6,10 @@ FreeBSD Cheatsheet
     hostname="joanna"
 
 ### Ports Management
+
+### Before upgrading 
+
+	Read /usr/ports/UPDATING
     
 ####Upgrading ports collection
     # portsnap fetch
