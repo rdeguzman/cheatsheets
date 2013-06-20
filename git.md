@@ -13,7 +13,7 @@ Git
 		%git push origin myfeature
 		...
 		
-2.  Your features changes on master
+2.  Placing your features changes on top of master.
 		
 		%git checkout master
 		Switched to branch 'master'
@@ -23,8 +23,12 @@ Git
 		Fast-forwarded master to 4a1dea608d999568ccc32fd7ee4e6b57c4bfcb0a.
 		
 		%git rebase myfeature #suggested by colleague
+		
+3.  [optional] Merge ONLY if the feature branch has significant changes.
 
-3.  The --no-ff flag causes the merge to always create a new commit object, even if the merge could be performed with a fast-forward.
+	Specify --no-ff flag causes the merge to always create a new commit object, even if the merge could be performed with a fast-forward. 
+
+	Always, specify a good commit message when merging, i.e ('Merge authentication feature to master')
 	
 		%git merge -m "Merge spatial features to master. Your message goes here" --no-ff myfeature
 		Updating ea1b82a..05e9557
