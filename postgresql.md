@@ -1,8 +1,27 @@
 PostgreSQL
 ---
+### Informational
+	\d[S+]                 list tables, views, and sequences
+	\d[S+]  NAME           describe table, view, sequence, or index
+	\dg[+]  [PATTERN]      list roles
+	\di[S+] [PATTERN]      list indexes
+	\dL[S+] [PATTERN]      list procedural languages
+	\dn[S+] [PATTERN]      list schemas
+	\dp     [PATTERN]      list table, view, and sequence access privileges
+	\ds[S+] [PATTERN]      list sequences
+	\dt[S+] [PATTERN]      list tables
+	\dT[S+] [PATTERN]      list data types
+	\du[+]  [PATTERN]      list roles
+	\dv[S+] [PATTERN]      list views
+	\l[+]                  list all databases
+	\sf[+] FUNCNAME        show a function's definition
+	\z      [PATTERN]      same as \dp
+  
 ### pg_dump
 	pg_dump --host=127.0.0.1 --port=5432 --username=dbadmin --format=custom --file="/path/to/database.backup" database_name
-
+	
+### Insert N Random Records
+	insert into clients(name) select random_string(10) from generate_series(1,100000);
 
 ### Kill client connection
 	SELECT * FROM pg_stat_activity;
@@ -52,5 +71,3 @@ PostgreSQL
   	end;
   	$$ language plpgsql;
 
-### Insert N Random Records
-	insert into clients(name) select random_string(10) from generate_series(1,100000);
