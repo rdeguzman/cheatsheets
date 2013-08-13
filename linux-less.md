@@ -1,6 +1,9 @@
 Less
 ---
 
+### Waiting for data
+  	Shift+F
+
 ### Color
 	: -R
 
