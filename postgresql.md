@@ -19,12 +19,22 @@ PostgreSQL
   
 ### pg_dump
 	pg_dump --host=127.0.0.1 --port=5432 --username=dbadmin --format=custom --file="/path/to/database.backup" database_name
-  	
-  	pg_dump --host=abraham --port=5432 --username=dbadmin -F p --file="./roles.backup" --table='public.roles' --data-only --inserts datalink_development
+	
+	pg_dump --host=abraham --port=5432 --username=dbadmin -F p --file="roles.backup" --table='public.roles' --data-only --inserts datalink_development
 
 ### pg_restore
-  
-  	pg_restore --verbose --host=localhost --port=5432 --username=dbadmin --dbname=datalink_development file_name 
+	
+	pg_restore --verbose --host=localhost --port=5432 --username=dbadmin --dbname=datalink_development file_name 
+	
+### DateTime Functions
+	from_unixtime(bigint) or
+	
+		to_timestamp(gps_timestamp) AT TIME ZONE 'AEST'
+			1376346762 => 2013-08-13 08:32:42 
+		
+		to_timestamp(gps_timestamp)::timestamp (UTC)
+			1376346762 => 2013-08-12 22:32:42
+		
 	
 ### Insert N Random Records
 	insert into clients(name) select random_string(10) from generate_series(1,100000);
