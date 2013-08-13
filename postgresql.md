@@ -19,6 +19,12 @@ PostgreSQL
   
 ### pg_dump
 	pg_dump --host=127.0.0.1 --port=5432 --username=dbadmin --format=custom --file="/path/to/database.backup" database_name
+  	
+  	pg_dump --host=abraham --port=5432 --username=dbadmin -F p --file="./roles.backup" --table='public.roles' --data-only --inserts datalink_development
+
+### pg_restore
+  
+  	pg_restore --verbose --host=localhost --port=5432 --username=dbadmin --dbname=datalink_development file_name 
 	
 ### Insert N Random Records
 	insert into clients(name) select random_string(10) from generate_series(1,100000);
