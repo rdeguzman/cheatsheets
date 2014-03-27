@@ -1,5 +1,11 @@
 # Bash
 
+## Functions
+
+	foo () {
+		echo "Hello World"
+	}
+
 ## Loops
 
 ### for
