@@ -7,6 +7,11 @@ FreeBSD Cheatsheet
 
 ### Ports Management
 
+#### List installed ports
+
+    # pkg_info (FreeBSD9)
+    # pkg info (FreeBSD10)
+
 ### Before upgrading 
 
 	Read /usr/ports/UPDATING
