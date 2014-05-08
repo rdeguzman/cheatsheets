@@ -16,6 +16,10 @@ PostgreSQL
 	\l[+]                  list all databases
 	\sf[+] FUNCNAME        show a function's definition
 	\z      [PATTERN]      same as \dp
+	
+### Roles
+	CREATE ROLE myrole WITH LOGIN PASSWORD 'mypassword' SUPERUSER INHERIT CREATEDB CREATEROLE;
+	
   
 ### pg_dump
 	pg_dump --host=127.0.0.1 --port=5432 --username=dbadmin --format=custom --file="/path/to/database.backup" database_name
