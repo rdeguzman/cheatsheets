@@ -90,4 +90,7 @@ PostgreSQL
     	return result;
   	end;
   	$$ language plpgsql;
+  	
+### CSV OUTPUT
+	COPY (SELECT * from users) To '/tmp/output.csv' With CSV;  	
 
