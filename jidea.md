@@ -1,5 +1,10 @@
-JIDEA Shortcuts
 ---
+layout: default
+---
+IntelliJIdea Cheatsheet
+---
+
+## Shortcuts
 
 ### Build & Run
     cmd + shift + F9		Compile

@@ -1,4 +1,7 @@
-Less
+---
+layout: default
+---
+Less CheatSheet
 ---
 
 ### Waiting for data

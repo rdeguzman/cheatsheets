@@ -1,4 +1,9 @@
-### OSX keyboard shortcuts
+---
+layout: default
+---
+# OSX Cheatsheet
+
+## Keyboard Shortcuts
 					
 
 	Add Selected Item to Sidebar	Command+T

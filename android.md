@@ -1,12 +1,16 @@
-Android
+---
+layout: default
+---
+Android Cheatsheet
 ---
 
 ## Keystore
 
 ### Display SHA1 for keystore
 
+Typically used in Google Maps
+
 	# keytool -list -v -keystore ~/.android/debug.keystore -alias your_alias
-  # keytool -list -v -keystore ~/.android/debug.keystore -alias androiddebugkey -storepass android -keypass android
 
 ### Genereate hash from keystore
 

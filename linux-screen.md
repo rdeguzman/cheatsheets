@@ -1,4 +1,7 @@
-Linux Screen
+---
+layout: default
+---
+Linux Screen CheatSheet
 ---
 
 ### Basic Tutorial

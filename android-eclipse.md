@@ -1,4 +1,7 @@
-Android
+---
+layout: default
+---
+Android Cheatsheet
 ---
 
 ## Eclipse

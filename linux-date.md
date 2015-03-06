@@ -1,4 +1,7 @@
-Linux Date
+---
+layout: default
+---
+Linux CheatSheet
 ---
 
 ### Fromatting
