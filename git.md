@@ -57,6 +57,15 @@ Forget everything on my current local branch and make it exactly the same as ori
 	
 	% git reset --hard origin/master	
 	
+### Submodules
+Add a submodule to a project
+
+	git submodule add https://github.com/rdeguzman/cheatsheets
+	
+Update a submodule within a project
+
+	git submodule update --remote cheatsheets		
+	
 	
 
     
