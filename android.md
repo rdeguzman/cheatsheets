@@ -21,6 +21,11 @@ Typically used in Facebook
 
 ## adb
 
+	adb connect [ip]             # connects to emulator or specific device
+	adb devices                  # list all devices connected to adb
+	adb pull /path/to/file       # grabs file from device / emulator
+	adb shell [command]			  # executes shell command
+
 ### Reconnect an emulator to adb
 
 Get the IP of your emulator, on genymotion terminal
@@ -36,5 +41,20 @@ On OSX Terminal	. Reconnect adb to the emulator
 	# adb devices
 	# List of devices attached
 	192.168.56.101:5555	device
+	
+## styles
+
+### parent style
+
+	<style name="BasicColumn">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/table_text</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">5dp</item>
+    </style>
+    <style name="JobDetailsTextViewColumn" parent="@style/BasicColumn">
+        <item name="android:layout_width">450dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>	
 	
 	    
