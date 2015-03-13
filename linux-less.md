@@ -4,12 +4,9 @@ layout: default
 Less CheatSheet
 ---
 
-### Waiting for data
-  	Shift+F
-
-### Color
-	: -R
-
-### Search
-	/pattern	Search forward in the file
-	?pattern	Search backward in the file
+### Commands
+	Shift+F           # Waiting for data
+	-R                # Color
+	-N                # Line Numbers
+	/pattern          # Search forward
+	?pattern	        # Search backward
