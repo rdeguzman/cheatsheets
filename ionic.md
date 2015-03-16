@@ -4,6 +4,10 @@ layout: default
 Ionic CheatSheet
 ---
 
+### Install
+
+	npm install -g ionic cordova gulp ios-sim
+
 ### CLI Commands	
 
 	  cd MyApp
