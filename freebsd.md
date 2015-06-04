@@ -4,7 +4,7 @@ layout: default
 FreeBSD Cheatsheet
 ---
 
-#### Change Hostname
+####Change Hostname
     # vim /etc/rc.conf
     hostname="joanna"
 
@@ -31,10 +31,6 @@ FreeBSD Cheatsheet
 #### Building via port    
    	% make config-recursive		# Show all configs before building
    	% env BATCH=yes				# Answers "YES" to all configs  
-	
-### Date
-
-	% ntpdate -v -b oceania.pool.ntp.org  # sync with ntp server
-	% vi /etc/rc.conf
-	ntpdate_enable="YES"
-	ntpdate_hosts="oceania.pool.ntp.org"    
+    
+#### ntpdate
+   ntpdate -v -b in.pool.ntp.org 
