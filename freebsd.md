@@ -15,6 +15,7 @@ FreeBSD Cheatsheet
 	% pkg_info				# List all ports (FreeBSD 9)
 	% pkg info				# List all ports (FreeBSD 10)
 	% pkg install <name>	# Install package
+	% env ASSUME_ALWAYS_YES=YES pkg install <name>
 
 #### Before upgrading 
 
@@ -31,6 +32,6 @@ FreeBSD Cheatsheet
 #### Building via port    
    	% make config-recursive		# Show all configs before building
    	% env BATCH=yes				# Answers "YES" to all configs  
-    
+   	
 #### ntpdate
    ntpdate -v -b in.pool.ntp.org 
