@@ -160,6 +160,9 @@ This happens when the maximum number of records in gps_histories is not in sync 
 		
 		to_timestamp(gps_timestamp)::timestamp (UTC)
 			1376346762 => 2013-08-12 22:32:42
+			
+	# extract(epoch from '2015-08-31T08:16:27+10:00' at time zone 'utc');
+	 1440972987			
 
 ### Insert N Random Records
 	insert into clients(name) select random_string(10) from generate_series(1,100000);
