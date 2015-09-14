@@ -66,6 +66,9 @@ Update a submodule within a project
 
 	git submodule update --remote cheatsheets		
 	
+### Squash
+
+  git rebase -i HEAD~3
 	
 
     
