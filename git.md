@@ -67,8 +67,29 @@ Update a submodule within a project
 	git submodule update --remote cheatsheets		
 	
 ### Squash
+  
+Do the squashing on a separate branch:
+  
+    git checkout -b squashed_feature
+    git rebase -i master
+  
+    pick fda59df commit 1
+    pick x536897 commit 2
+    pick c01a668 commit 3
+    
+Each line represents a commit (in chronological order, the latest commit will be at the bottom).  
 
-  git rebase -i HEAD~3
+This means, you take the first commit, and squash the following onto it.
+    
+    pick fda59df commit 1
+    squash x536897 commit 2
+    squash c01a668 commit 3
+    
+You can now merge your feature as a single commit into the master:    
+    
+    git checkout master
+    git merge squashed_feature
 	
+ 
 
     
