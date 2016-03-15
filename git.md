@@ -89,6 +89,16 @@ You can now merge your feature as a single commit into the master:
     
     git checkout master
     git merge squashed_feature
+    
+### Tags
+
+Delete a tag from Remote repo
+
+    git tag -d login1
+    git tag -d login2
+    git push origin :refs/tags/login1
+    git push origin :refs/tags/login2
+    
 	
  
 
