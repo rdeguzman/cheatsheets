@@ -98,7 +98,17 @@ Delete a tag from Remote repo
     git tag -d login2
     git push origin :refs/tags/login1
     git push origin :refs/tags/login2
-    
+
+### Delete a branch
+
+	% git branch -d mapview
+	error: The branch 'mapview' is not fully merged.
+	If you are sure you want to delete it, run 'git branch -D mapview'.
+	% git branch -D mapview
+	
+To remove the branch remotely
+
+	git push origin mapview
 	
  
 
