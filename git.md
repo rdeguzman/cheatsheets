@@ -108,7 +108,7 @@ Delete a tag from Remote repo
 	
 To remove the branch remotely
 
-	git push origin mapview
+	git push origin --delete mapview
 	
  
 
