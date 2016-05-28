@@ -16,3 +16,4 @@ Ionic CheatSheet
 	  ionic platform android      # Add a platform (ios or Android)
 	  ionic build android         # Build your app
 	  ionic run android           # Run your app on a device, i.e genymotion
+	  ionic emulate ios           # Run your app on ios
