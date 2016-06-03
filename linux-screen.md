@@ -22,4 +22,4 @@ Linux Screen CheatSheet
     % screen -r 29760.1     
 
 ### Key Shortcuts
-    cmd + a d               Detaches a screen 
+    ctrl + a d               Detaches a screen 

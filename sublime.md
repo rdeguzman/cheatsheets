@@ -17,5 +17,8 @@ Sublime CheatSheet
 ### Find File
 	 ⌘ + P
 
-### Find File
-	 cmd + P
+### GoTo Line
+	 ⌃ + G
+
+### GoTo Definition
+	 right-click => Go To Definition
