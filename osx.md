@@ -1,10 +1,10 @@
 ---
 layout: default
 ---
-# OSX Cheatsheet
-
+OSX Cheatsheet
+---
 ## Keyboard Shortcuts
-					
+
 
 	Add Selected Item to Sidebar	Command+T
 	Close All Windows				Option+Command+W
@@ -41,5 +41,3 @@ layout: default
 	F10				Application Windows
 	F11				Show Desktop
 	F12				Dashboard
-	
-	

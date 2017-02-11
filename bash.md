@@ -1,8 +1,8 @@
 ---
 layout: default
 ---
-# Bash Cheatsheet
-
+Bash Cheatsheet
+---
 ## Checking arguments
 
 % foo.sh --opt1
@@ -46,4 +46,3 @@ layout: default
     	rm $file
     	ln -s ../$GCC42NAME/bin/$file $file
 	done
-
