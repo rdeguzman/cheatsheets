@@ -8,6 +8,9 @@ FZF CheatSheet
 	brew isntall fzf
 	/usr/local/opt/fzf/install
 	export FZF_DEFAULT_OPTS='--height 90%'
+	
+### localrc
+	export FZF_DEFAULT_OPTS='--no-height --no-reverse	
 
 ### vim-plug
 
