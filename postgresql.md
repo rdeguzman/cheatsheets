@@ -97,6 +97,8 @@ PostgreSQL CheatSheet
 	    "drivers_pkey" PRIMARY KEY, btree (id)	
 	
 ### Roles
+    SELECT rolname FROM pg_roles;
+   
 	CREATE ROLE myrole WITH LOGIN PASSWORD 'mypassword' SUPERUSER INHERIT CREATEDB CREATEROLE;
 	
 ### Change the password for a user/role
