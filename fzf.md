@@ -7,10 +7,12 @@ FZF CheatSheet
 ### Install
 	brew isntall fzf
 	/usr/local/opt/fzf/install
-	export FZF_DEFAULT_OPTS='--height 90%'
+   	brew install the_silver_searcher
 	
 ### localrc
-	export FZF_DEFAULT_OPTS='--no-height --no-reverse	
+	export FZF_DEFAULT_OPTS='--no-height --no-reverse'
+	export FZF_DEFAULT_COMMAND='ag -g ""'
+	export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 ### vim-plug
 
@@ -37,5 +39,4 @@ Download and install
 
 	CTRL + T  # Paste the selected files and directories onto the command line
 	CTRL + R  # Paste the selected command from history onto the command line
-	ALT-C # cd into the selected directory
 	
