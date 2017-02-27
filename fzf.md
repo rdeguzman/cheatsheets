@@ -8,7 +8,7 @@ FZF CheatSheet
 	brew isntall fzf
 	/usr/local/opt/fzf/install
    	brew install the_silver_searcher
-	
+
 ### localrc
 	export FZF_DEFAULT_OPTS='--no-height --no-reverse'
 	export FZF_DEFAULT_COMMAND='ag -g ""'
@@ -18,7 +18,7 @@ FZF CheatSheet
 
 Download and install
 
-  	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 	:PlugInstall
@@ -39,4 +39,3 @@ Download and install
 
 	CTRL + T  # Paste the selected files and directories onto the command line
 	CTRL + R  # Paste the selected command from history onto the command line
-	

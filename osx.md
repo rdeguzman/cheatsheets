@@ -5,7 +5,6 @@ OSX Cheatsheet
 ---
 ## Keyboard Shortcuts
 
-
 	Add Selected Item to Sidebar	Command+T
 	Close All Windows				Option+Command+W
 	Close Window					Command+W
