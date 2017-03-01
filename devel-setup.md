@@ -29,5 +29,5 @@ OSX Setup CheatSheet
 12. brew services start postgres
 13. brew install node
 14. curl -sSL https://get.rvm.io | bash -s stable 
-
-    
+15. brew install nginx
+16. sudo brew services start nginx
