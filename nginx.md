@@ -33,4 +33,12 @@ nginx CheatSheet
 	==> Summary
 	🍺  /usr/local/homebrew/Cellar/nginx/1.10.3: 8 files, 980.9KB, built in 34 seconds
 	brew install nginx  61.76s user 13.46s system 171% cpu 43.939 total
+	
+stop and start nginx
 
+	# sudo nginx
+	# sudo nginx -s stop
+
+## ubuntu
+
+	# sudo apt-get install nginx
