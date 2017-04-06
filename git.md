@@ -111,5 +111,7 @@ To remove the branch remotely
 	git push origin --delete mapview
 	
  
+### Permanently authenticate https
 
-    
+    git config --global credential.helper 'cache --timeout 3600'
+    git help credential-cache
