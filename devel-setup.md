@@ -10,12 +10,12 @@ OSX Setup CheatSheet
 4. install homebrew
 5. dotfiles
 
-		ln -s /Users/reddog/.dotfiles/zshrc .zshrc
-		ln -s /Users/reddog/.dotfiles/zsh .zsh
-		ln -s /Users/reddog/.dotfiles/localrc .localrc
-		ln -s /Users/reddog/.dotfiles/gitignore .gitignore
-		ln -s /Users/reddog/.dotfiles/tmux.conf .tmux.conf
-		ln -s /Users/reddog/.dotfiles/vimrc .vimrc
+		ln -s /Users/rupert/.dotfiles/zshrc .zshrc
+		ln -s /Users/rupert/.dotfiles/zsh .zsh
+		ln -s /Users/rupert/.dotfiles/localrc .localrc
+		ln -s /Users/rupert/.dotfiles/gitignore .gitignore
+		ln -s /Users/rupert/.dotfiles/tmux.conf .tmux.conf
+		ln -s /Users/rupert/.dotfiles/vimrc .vimrc
 
 6. chsh zsh
 7. brew install fzf tmux
@@ -31,3 +31,12 @@ OSX Setup CheatSheet
 14. curl -sSL https://get.rvm.io | bash -s stable 
 15. brew install nginx
 16. sudo brew services start nginx
+
+Ubuntu Setup CheatSheet
+
+		ln -s /home/rupert/.dotfiles/zshrc .zshrc
+		ln -s /home/rupert/.dotfiles/zsh .zsh
+		ln -s /home/rupert/.dotfiles/localrc .localrc
+		ln -s /home/rupert/.dotfiles/gitignore .gitignore
+		ln -s /home/rupert/.dotfiles/tmux.conf .tmux.conf
+		ln -s /home/rupert/.dotfiles/vimrc .vimrc
