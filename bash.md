@@ -3,9 +3,20 @@ layout: default
 ---
 Bash Cheatsheet
 ---
+
+## Reference
+
+	https://www.gnu.org/software/bash/manual/bash.html
+
+## Conditionals
+
+	OP is one of ‘-eq’, ‘-ne’, ‘-lt’, ‘-le’, ‘-gt’, or ‘-ge’
+
 ## Checking arguments
 
 % foo.sh --opt1
+
+where $# is the number of arguments
 
 	while test $# -gt 0
 	do
