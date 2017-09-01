@@ -78,6 +78,10 @@ PostgreSQL CheatSheet
 	template_postgis | postgres | UTF8
 	(5 rows)	
 	
+### show all schemas
+
+	select schema_name from information_schema.schemata	
+	
 ### Describe a table
 	\d schema_name.table_name or \d table_name (which references public)
 
@@ -95,7 +99,21 @@ PostgreSQL CheatSheet
 	 pin        | integer                     | 
 	Indexes:
 	    "drivers_pkey" PRIMARY KEY, btree (id)	
-	
+### describe a function
+
+	datalink_development=# \df postgis.st_intersects
+	                                                   List of functions
+	 Schema  |     Name      | Result data type |                       Argument data types                       |  Type
+	---------+---------------+------------------+-----------------------------------------------------------------+--------
+	 postgis | st_intersects | boolean          | geography, geography                                            | normal
+	 postgis | st_intersects | boolean          | geom1 geometry, geom2 geometry                                  | normal
+	 postgis | st_intersects | boolean          | geom geometry, rast raster, nband integer DEFAULT NULL::integer | normal
+	 postgis | st_intersects | boolean          | rast1 raster, nband1 integer, rast2 raster, nband2 integer      | normal
+	 postgis | st_intersects | boolean          | rast1 raster, rast2 raster                                      | normal
+	 postgis | st_intersects | boolean          | rast raster, geom geometry, nband integer DEFAULT NULL::integer | normal
+	 postgis | st_intersects | boolean          | rast raster, nband integer, geom geometry                       | normal
+	 postgis | st_intersects | boolean          | text, text                                                      | normal
+ 	
 ### Roles
     SELECT rolname FROM pg_roles;
    
