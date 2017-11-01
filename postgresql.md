@@ -207,4 +207,6 @@ This happens when the maximum number of records in gps_histories is not in sync 
   	
 ### CSV OUTPUT
 	COPY (SELECT * from users) To '/tmp/output.csv' With CSV;  	
+### Search Path
 
+	set search_path to dfms_5000, public
