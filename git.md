@@ -115,3 +115,53 @@ To remove the branch remotely
 
     git config --global credential.helper 'cache --timeout 3600'
     git help credential-cache
+
+### Multiple github Accounts in one machine
+
+Create a new ssh
+
+	ssh-keygen -t rsa -b 4096 -C "username-used-at-github@gmail.com"
+	
+Create an ssh config	
+	
+	# vim ~/.ssh/config
+	Host github
+	  HostName github.com
+	  User git
+	  IdentityFile ~/.ssh/id_rsa
+	  IdentitiesOnly yes
+
+	Host github-foobar
+	  HostName github.com
+	  User git
+	  IdentityFile ~/.ssh/id_foobar
+	  IdentitiesOnly yes
+	  
+Add github-foobar in remote origin
+
+	#git remote -v
+	origin	git@github-foobar:username/website.git (fetch)	  
+	  
+Remove global user.name (not essential)
+
+	git config --global --unset user.name
+	git config --global --unset user.email
+	
+Then set a local user.name per repo 
+	
+	git config user.name foobar  
+
+To test, use ssh -v and see which user connects / authenticated successfully based on host	
+	
+	# ssh -v git@github	
+	OpenSSH_6.9p1, LibreSSL 2.1.8
+	debug1: Reading configuration data /Users/rupert/.ssh/config
+	...
+	PTY allocation request failed on channel 0
+	debug1: client_input_channel_req: channel 0 rtype exit-status reply 0
+	Hi rdeguzman! You've successfully authenticated, but GitHub does not provide shell access.
+	debug1: channel 0: free: client-session, nchannels 1
+	Connection to github.com closed.
+	Transferred: sent 3568, received 1868 bytes, in 0.8 seconds
+	Bytes per second: sent 4619.8, received 2418.7
+	debug1: Exit status 1
