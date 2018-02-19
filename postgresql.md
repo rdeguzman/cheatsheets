@@ -47,6 +47,18 @@ PostgreSQL CheatSheet
 	WHERE 
 	  table_schema NOT IN ('information_schema','pg_catalog') 
 	ORDER BY size DESC;
+	
+	COPY (
+        SELECT
+          table_schema,
+          table_name,
+          pg_size_pretty(pg_relation_size(table_schema || '.' || table_name)) as size_in_mb,
+          pg_relation_size(table_schema || '.' || table_name) as size
+        FROM information_schema.tables
+        WHERE
+          table_schema NOT IN ('information_schema','pg_catalog')
+        ORDER BY size DESC
+	) TO '/var/log/pgsql/db_estimate.csv' (format csv, delimiter ',');
 
 ### Informational
 	\d[S+]                 list tables, views, and sequences
