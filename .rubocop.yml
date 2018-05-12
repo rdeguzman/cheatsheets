@@ -1,0 +1,24 @@
+AllCops:
+  Include:
+    - '**/Rakefile'
+    - '**/config.ru'
+  Exclude:
+  - 'vendor/**/*'
+  - 'spec/fixtures/**/*'
+  - 'db/schema.rb'
+  - 'db/migrate/*'
+  - 'bin/bundle'
+  - 'bin/rails'
+  - 'bin/rake'
+  - 'bin/setup'
+  - 'bin/spring'
+  - 'bin/update'
+  - 'config/**/*'
+  - 'script/**/*'
+
+Style/Encoding:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+
