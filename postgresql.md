@@ -4,6 +4,14 @@ layout: default
 PostgreSQL CheatSheet
 ---
 
+### brew install
+
+	rupsmbp-lc:Cellar/postgresql/10.4[stable]% psql postgres
+	psql (10.4)
+	Type "help" for help.
+	
+	postgres=#
+
 ### Postgis version?	
 	SELECT POSTGIS_FULL_VERSION();
 	
