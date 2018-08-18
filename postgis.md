@@ -3,6 +3,28 @@ layout: default
 ---
 PostGis CheatSheet
 ---
+### brew install postgis
+
+	==> Downloading https://homebrew.bintray.com/bottles/postgis-2.4.4_1.high_sierra.bottle.tar.gz
+	######################################################################## 100.0%
+	==> Pouring postgis-2.4.4_1.high_sierra.bottle.tar.gz
+	==> Caveats
+	To create a spatially-enabled database, see the documentation:
+		https://postgis.net/docs/manual-2.4/postgis_installation.html#create_new_db_extensions
+	If you are currently using PostGIS 2.0+, you can go the soft upgrade path:
+		ALTER EXTENSION postgis UPDATE TO "2.4.4";
+	Users of 1.5 and below will need to go the hard-upgrade path, see here:
+		https://postgis.net/docs/manual-2.4/postgis_installation.html#upgrading
+
+	PostGIS SQL scripts installed to:
+		/usr/local/homebrew/opt/postgis/share/postgis
+	PostGIS plugin libraries installed to:
+		/usr/local/homebrew/lib
+	PostGIS extension modules installed to:
+		/usr/local/homebrew/share/postgresql/extension
+	==> Summary
+	🍺  /usr/local/homebrew/Cellar/postgis/2.4.4_1: 248 files, 101.2MB
+
 ### Add Geometry Column
 	SELECT AddGeometryColumn('public', 'poi', 'the_geom', 4326, 'POINT', 2)
 	
