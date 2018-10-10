@@ -230,3 +230,10 @@ This happens when the maximum number of records in gps_histories is not in sync 
 ### Search Path
 
 	set search_path to dfms_5000, public
+
+### Updating Postgres packages on Ubuntu
+
+	wget -q https://www.postgresql.org/media/keys/ACCC4CF8.asc -O - | sudo apt-key add -
+	sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
+	sudo apt-get update
+	sudo apt-get install postgresql-client-10
