@@ -10,3 +10,6 @@ OGR2OGR CheatSheet
 ### Import shape to postgres
 
 	ogr2ogr -f "PostgreSQL" PG:"host=localhost user=myuser dbname=mydb password=mypass" -nlt GEOMETRY sample.shp
+
+	ogr2ogr -f GeoJSON out.json PG:"host=localhost port=5431 user=myuser dbname=mydb" -sql "select * from sample"
+
