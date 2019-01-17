@@ -7,6 +7,9 @@ Vim CheatSheet
 ### Removing ^M characters
 	%s/^M/\r\n/g	^M => (ctrl + v then ctrl + m)
 
+### Removing new line
+	%s/\n//g
+
 ### Recording and Playing macros
     qa               Start recording macro a
     q				 Start/Stop recording
