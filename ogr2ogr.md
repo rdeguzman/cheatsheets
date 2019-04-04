@@ -18,3 +18,11 @@ ERROR:  Geometry type (MultiPolygon) does not match column type (Polygon)
 
 	ogr2ogr -f GeoJSON out.json PG:"host=localhost port=5431 user=myuser dbname=mydb" -sql "select * from sample"
 
+
+### Import geojson to postgres
+
+	ogr2ogr -f "PostgreSQL" PG:"host=localhost port=5431 user=myuser dbname=mydb" "sample.geojson"
+
+imports to a specific table
+
+	oogr2ogr -append -f "PostgreSQL" PG:"host=localhost port=5431 user=myuser dbname=mydb" -nln coverages "sample.geojson"
