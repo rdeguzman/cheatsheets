@@ -45,13 +45,26 @@ PostgreSQL CheatSheet
 	 nominatim_20121210   | 9319 MB
 	(10 rows)	
 	
+### Show schema_size for DB
+
+	SELECT schema_name, 
+	       pg_size_pretty(sum(table_size)::bigint)
+	FROM (
+	  SELECT pg_catalog.pg_namespace.nspname as schema_name,
+	         pg_relation_size(pg_catalog.pg_class.oid) as table_size
+	  FROM   pg_catalog.pg_class
+	     JOIN pg_catalog.pg_namespace ON relnamespace = pg_catalog.pg_namespace.oid
+	) t
+	GROUP BY schema_name
+	ORDER BY schema_name	
+	
 ### Showing the biggest tables in MB
 	SELECT 
 	  table_schema, 
 	  table_name, 
 	  pg_size_pretty(pg_relation_size(table_schema || '.' || table_name)) as size_in_mb, 
-	  pg_relation_size(table_schema || '.' || table_name) as size 
-	FROM information_schema.tables 
+	  pg_size_pretty(pg_indexes_size(table_schema || '.' || table_name))	  as index_in_mb,
+	  pg_relation_size(table_schema || '.' || table_name) as size	FROM information_schema.tables 
 	WHERE 
 	  table_schema NOT IN ('information_schema','pg_catalog') 
 	ORDER BY size DESC;
@@ -67,6 +80,8 @@ PostgreSQL CheatSheet
           table_schema NOT IN ('information_schema','pg_catalog')
         ORDER BY size DESC
 	) TO '/var/log/pgsql/db_estimate.csv' (format csv, delimiter ',');
+
+
 
 ### Informational
 	\d[S+]                 list tables, views, and sequences
@@ -237,3 +252,9 @@ This happens when the maximum number of records in gps_histories is not in sync 
 	sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list'
 	sudo apt-get update
 	sudo apt-get install postgresql-client-10
+
+	sudo apt-get install curl ca-certificates
+	curl https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+	sudo vim /etc/apt/sources.list
+	sudo apt-get update
+	sudo apt-get install pgdg-keyring postgresql-client-11
