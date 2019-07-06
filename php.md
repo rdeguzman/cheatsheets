@@ -65,3 +65,7 @@ PHP CheatSheet
 	  ==> Summary
 	  🍺  /usr/local/homebrew/Cellar/php@7.1/7.1.19: 509 files, 67.2MB, built in 8 minutes 9 seconds
 	  brew install php71  1092.44s user 549.76s system 329% cpu 8:19.12 total
+
+## print new line
+
+	 print_r($id . ':' . $href . "\xA");
