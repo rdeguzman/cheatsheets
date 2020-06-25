@@ -258,3 +258,7 @@ This happens when the maximum number of records in gps_histories is not in sync 
 	sudo vim /etc/apt/sources.list
 	sudo apt-get update
 	sudo apt-get install pgdg-keyring postgresql-client-11
+
+### Regex
+
+	SELECT name, source_id, regexp_matches(source_id, '^[A-Z]+') FROM app.companies WHERE source_id is not null;
