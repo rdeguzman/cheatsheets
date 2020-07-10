@@ -262,3 +262,11 @@ This happens when the maximum number of records in gps_histories is not in sync 
 ### Regex
 
 	SELECT name, source_id, regexp_matches(source_id, '^[A-Z]+') FROM app.companies WHERE source_id is not null;
+	
+### Duplicate records
+
+	SELECT * FROM (
+	  SELECT objectid, ROW_NUMBER() OVER (PARTITION BY geom) as Row
+	  FROM qld_import.noosa_planning_scheme_zones_1594350814
+	) dups
+	WHERE dups.Row > 1;	
