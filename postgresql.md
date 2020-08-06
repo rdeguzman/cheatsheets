@@ -62,9 +62,10 @@ PostgreSQL CheatSheet
 	SELECT 
 	  table_schema, 
 	  table_name, 
-	  pg_size_pretty(pg_relation_size(table_schema || '.' || table_name)) as size_in_mb, 
-	  pg_size_pretty(pg_indexes_size(table_schema || '.' || table_name))	  as index_in_mb,
-	  pg_relation_size(table_schema || '.' || table_name) as size	FROM information_schema.tables 
+	  pg_size_pretty(pg_relation_size(table_schema || '.' || table_name)) as size_in_mb,
+	  pg_size_pretty(pg_indexes_size(table_schema || '.' || table_name)) as index_in_mb,
+	  pg_relation_size(table_schema || '.' || table_name) as size
+	FROM information_schema.tables
 	WHERE 
 	  table_schema NOT IN ('information_schema','pg_catalog') 
 	ORDER BY size DESC;
@@ -81,7 +82,15 @@ PostgreSQL CheatSheet
         ORDER BY size DESC
 	) TO '/var/log/pgsql/db_estimate.csv' (format csv, delimiter ',');
 
+### Show size of a table
 
+	SELECT
+	  table_schema,
+	  table_name,
+	  pg_size_pretty(pg_relation_size(table_schema || '.' || table_name)) as size_in_mb,
+	  pg_size_pretty(pg_indexes_size(table_schema || '.' || table_name)) as index_in_mb,
+	  pg_relation_size(table_schema || '.' || table_name) as size
+	FROM information_schema.tables WHERE table_schema = 'data' and table_name = 'lga_planning_schemes'
 
 ### Informational
 	\d[S+]                 list tables, views, and sequences
