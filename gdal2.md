@@ -4,6 +4,8 @@ layout: default
 gdal2 
 ---
 
+## install by homebrew
+
 	% brew tap osgeo/osgeo4mac
 	
 	Updating Homebrew...
@@ -59,3 +61,11 @@ brew install gdal2 --with-postgresql
 	==> Summary
 	🍺  /usr/local/homebrew/Cellar/gdal2/2.3.1: 232 files, 45.8MB, built in 8 minutes 7 seconds
 	brew install gdal2  2754.32s user 319.06s system 626% cpu 8:10.50 total
+
+## install by kyngchaos
+
+- Download installer from http://www.kyngchaos.com/software/frameworks/
+- Append to path
+
+		# GDAL
+		export PATH=$PATH:/Library/Frameworks/GDAL.framework/Programs
