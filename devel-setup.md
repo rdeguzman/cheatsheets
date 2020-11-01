@@ -40,3 +40,5 @@ Ubuntu Setup CheatSheet
 		ln -s /home/rupert/.dotfiles/gitignore .gitignore
 		ln -s /home/rupert/.dotfiles/tmux.conf .tmux.conf
 		ln -s /home/rupert/.dotfiles/vimrc .vimrc
+
+17. Use karabiner setup to change: esc to caps lock

@@ -26,3 +26,17 @@ ERROR:  Geometry type (MultiPolygon) does not match column type (Polygon)
 imports to a specific table
 
 	oogr2ogr -append -f "PostgreSQL" PG:"host=localhost port=5431 user=myuser dbname=mydb" -nln coverages "sample.geojson"
+
+### Import GDB to shape
+
+	ogr2ogr -progress -overwrite -skipfailures -f "ESRI Shapefile" output.shp input.gdb layer_name
+
+### import GDB to postgres
+
+	ogr2ogr -f "PostgreSQL" GEODATA_DB_STRING -lco "SCHEMA=qld_import" -lco "GEOMETRY_NAME=geom" -lco "OVERWRITE=yes" data.gdb layer -nln table_name
+
+### List layers / summary
+
+	ogrinfo -so test.gdb
+
+
