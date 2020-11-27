@@ -17,3 +17,9 @@ Docker CheatSheet
 ### passing environment to docker
 
 	docker run -e MAPBOX_KEY="$MAPBOX_KEY" --privileged -it -v $(pwd)/data:/data -p 8080:80 lc-tileserver-latest	
+
+### cleanup images and containers
+
+	docker image prune -f
+
+	docker container prune -f

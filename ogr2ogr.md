@@ -39,4 +39,6 @@ imports to a specific table
 
 	ogrinfo -so test.gdb
 
+### See all formats
 
+	ogrinfo --formats

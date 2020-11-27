@@ -279,3 +279,13 @@ This happens when the maximum number of records in gps_histories is not in sync 
 	  FROM qld_import.noosa_planning_scheme_zones_1594350814
 	) dups
 	WHERE dups.Row > 1;	
+	
+### show function definition
+
+	landcheckerdb=# \sf st_area(geometry)
+	CREATE OR REPLACE FUNCTION public.st_area(geometry)
+	 RETURNS double precision
+	 LANGUAGE c
+	 IMMUTABLE PARALLEL SAFE STRICT COST 10
+	AS '$libdir/postgis-2.5', $function$area$function$
+
