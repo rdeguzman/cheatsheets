@@ -165,3 +165,17 @@ To test, use ssh -v and see which user connects / authenticated successfully bas
 	Transferred: sent 3568, received 1868 bytes, in 0.8 seconds
 	Bytes per second: sent 4619.8, received 2418.7
 	debug1: Exit status 1
+	
+### Multiple accounts in bitbucket
+
+https://support.atlassian.com/bitbucket-cloud/docs/set-up-additional-ssh-keys/	
+
+Create user <rupertdguzman> in bitbucket
+
+	% cd rupertdocs-safebox
+	% git remote set-url bitbucket rupertdguzman@bitbucket.org:rupertdguzman/rupertdocs-safebox.git
+	
+	% cd ~/.ssh
+	% ssh-keygen -t rsa -C "rupertdguzman" -f "rupertdguzman"
+	% ssh-add ~/.ssh/rupertdguzman # private
+	% ssh-add ~/.ssh/id_rsa # public or work
