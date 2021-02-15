@@ -25,7 +25,15 @@ ERROR:  Geometry type (MultiPolygon) does not match column type (Polygon)
 
 imports to a specific table
 
-	oogr2ogr -append -f "PostgreSQL" PG:"host=localhost port=5431 user=myuser dbname=mydb" -nln coverages "sample.geojson"
+	ogr2ogr -append -f "PostgreSQL" PG:"host=localhost port=5431 user=myuser dbname=mydb" -nln coverages "sample.geojson"
+
+imports to a specific schema and table
+
+	ogr2ogr -append -f "PostgreSQL" PG:"host=localhost port=5431 user=myuser dbname=mydb" -nln myschema.coverages "sample.geojson"
+
+use geom as column name instead of wkb_geometry
+
+	ogr2ogr -f "PostgreSQL" PG:"host=localhost port=5432 user=landchecker dbname=landcheckerdb_test" -nln qld_import.test_heritage -lco GEOMETRY_NAME="geom" "test.geojson"
 
 ### Import GDB to shape
 
@@ -42,3 +50,8 @@ imports to a specific table
 ### See all formats
 
 	ogrinfo --formats
+
+### See columns 
+
+	ogrinfo -al -so file.shp
+

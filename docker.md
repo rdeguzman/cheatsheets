@@ -23,3 +23,7 @@ Docker CheatSheet
 	docker image prune -f
 
 	docker container prune -f
+
+### see processes within container
+
+	docker top [container-id]

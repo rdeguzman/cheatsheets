@@ -264,7 +264,6 @@ This happens when the maximum number of records in gps_histories is not in sync 
 
 	sudo apt-get install curl ca-certificates
 	curl https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-	sudo vim /etc/apt/sources.list
 	sudo apt-get update
 	sudo apt-get install pgdg-keyring postgresql-client-11
 
