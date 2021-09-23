@@ -179,3 +179,7 @@ Create user <rupertdguzman> in bitbucket
 	% ssh-keygen -t rsa -C "rupertdguzman" -f "rupertdguzman"
 	% ssh-add ~/.ssh/rupertdguzman # private
 	% ssh-add ~/.ssh/id_rsa # public or work
+	
+### Push all remote branches to another remote
+
+	git push bitbucket 'refs/remotes/origin/*:refs/heads/*'	
