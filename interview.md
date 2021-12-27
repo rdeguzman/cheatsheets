@@ -13,3 +13,16 @@ Interview CheatSheet
 	- Studying
 	- Single Parent
 	- etc
+
+### Tech 
+
+- IDE. VIM, VSCode or IntelliJ Products
+- Agile
+	- Standups
+	- Pairing
+
+
+### Ruby
+
+
+### Python
