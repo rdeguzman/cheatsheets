@@ -24,6 +24,9 @@ PostGis CheatSheet
 		/usr/local/homebrew/share/postgresql/extension
 	==> Summary
 	🍺  /usr/local/homebrew/Cellar/postgis/2.4.4_1: 248 files, 101.2MB
+	
+### Postgis version
+	SELECT POSTGIS_FULL_VERSION();	
 
 ### Add Geometry Column
 	SELECT AddGeometryColumn('public', 'poi', 'the_geom', 4326, 'POINT', 2)
