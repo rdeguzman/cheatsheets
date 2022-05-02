@@ -1,5 +1,0 @@
---skip-sprockets
---skip-coffee
---skip-bundle
---skip-test
---webpack
