@@ -23,3 +23,18 @@
 ### see processes within container
 
 	docker top [container-id]
+
+
+### docker-compose
+
+    docker-compose -f filename up
+
+with a specific service (db)
+
+    docker-compose -f filename up db
+
+run docker build with a tag if you use it in compose
+
+    docker build . -f filename -t service_name:latest
+    docker-compose -f filename up
+

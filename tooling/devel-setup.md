@@ -20,7 +20,7 @@
 		
 		curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 		
-10. PlugInstall
+10. vim then PlugInstall
 11. brew install postgres
 12. brew services start postgres
 13. brew install node
